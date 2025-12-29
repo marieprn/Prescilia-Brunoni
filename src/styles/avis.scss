@@ -1,0 +1,21 @@
+.avis {
+  padding: 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: right;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 120px;
+      height: 2px;
+      background: #791C39;
+      margin: 12px 0 0 auto;
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.engagements {
+  padding: 20px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: right;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 120px;
+      height: 2px;
+      background: #791C39;
+      margin: 12px 0 0 auto;
+    }
+  }
+
+  .engagementsContenu {
+    max-width: 600px;
+    margin-left: auto;
+    border-radius: 8px;
+    background: rgba(121, 28, 57, 0.05);
+    padding: 10px;
+    li {
+      margin-bottom: 12px;
+      line-height: 1.6;
+      position: relative;
+      padding-left: 20px;
+      list-style: none;
+
+      &::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #791C39;
+        font-size: 20px;
+        line-height: 1;
+      }
+    }
+  }
+}
