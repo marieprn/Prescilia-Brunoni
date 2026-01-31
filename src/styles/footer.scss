@@ -1,0 +1,142 @@
+.siteFooter {
+  background: #66705b;
+  color: #fff;
+}
+
+.footerContainer {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 48px 20px 18px;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr auto; // gauche / liens / socials
+  gap: 36px;
+  align-items: start;
+}
+
+/* --- Bloc gauche --- */
+.footerDesc {
+  max-width: 420px;
+  margin: 0 0 18px;
+  line-height: 1.6;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footerLien {
+  display: grid;
+  gap: 10px;
+}
+
+.footerLienTel,
+.footerLienMail {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.95;
+  transition: opacity 0.12s ease, transform 0.12s ease;
+
+  svg {
+    opacity: 0.9;
+    flex: 0 0 auto;
+  }
+
+  &:hover {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+/* --- Colonne liens --- */
+.siteFooter__col {
+  padding-top: 6px; // alignement visuel
+}
+
+.siteFooter__title {
+  margin: 0 0 8px;
+  height: 8px;
+}
+
+.siteFooter__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.siteFooter__link {
+  color: #fff;
+  text-decoration: none;
+  opacity: 0.95;
+
+  &:hover {
+    opacity: 1;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
+/* --- Réseaux sociaux --- */
+.footerSocial {
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+.footerSocialBtn {
+  width: 42px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  text-decoration: none;
+
+  svg {
+    display: block;
+  }
+}
+
+/* --- Ligne légale --- */
+.footerLegal {
+  margin: 34px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  text-align: center;
+
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* --- Responsive --- */
+@media (max-width: 980px) {
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footerSocial {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 560px) {
+  .footerGrid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .footerDesc {
+    font-size: 15px;
+  }
+}
