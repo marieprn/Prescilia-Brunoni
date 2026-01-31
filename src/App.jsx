@@ -5,6 +5,9 @@ import Presentation from "./components/presentation";
 import Engagements from "./components/engagements";
 import Realisations from "./components/realisation";
 import Avis from "./components/Avis";
+import FAQ from "./components/faq";
+import Formulaire from "./components/formulaire";
+import Footer from "./components/footer";
 import "../src/styles/app.scss";
 import Avant1 from "./assets/Avant1.jpg";
 import Apres1 from "./assets/Apres1.jpg";
@@ -21,11 +24,35 @@ function App() {
     <>
       <Header />
       <Menu />
-      <Carousel slides={slides} />
-      <Presentation/>
-      <Engagements/>
-      <Realisations/>
-      <Avis/>
+
+      <section id="accueil">
+        <Carousel slides={slides} />
+      </section>
+
+       <section id="presentation">
+        <Presentation />
+      </section>
+
+      <section id="engagement">
+        <Engagements />
+      </section>
+
+      <section id="realisation">
+        <Realisations />
+      </section>
+
+      <section id="avis">
+        <Avis />
+      </section>
+
+      <section id="faq">
+        <FAQ />
+      </section>
+
+      <section id="contact">
+        <Formulaire />
+      </section>
+      <Footer/>
     </>
   );
 }

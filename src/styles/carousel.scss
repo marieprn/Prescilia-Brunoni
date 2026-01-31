@@ -1,113 +1,146 @@
 .carousel {
+  --accent: #791c39;
+  --bg: #ffffff;
+  --soft: #f6f6f7;
+  --soft2: #faf6f7;
+  --text: #111;
+  --muted: #6b6b6b;
+  --border: rgba(0, 0, 0, 0.08);
+
   width: 100%;
-  overflow: hidden;
-  position: relative;
-  margin: 3rem auto;
   max-width: 1100px;
+  margin: 20px 105px;
+  padding: 1.2rem;
+}
 
-  // ---- Slides container ----
-  .carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+/* viewport = clip absolu */
+.carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+}
+
+/* track */
+.carousel-track {
+  display: flex;
+  transition: transform 0.55s ease;
+  will-change: transform;
+}
+
+/* slide */
+.carousel-slide {
+  min-width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.8rem;
+
+}
+
+.shot {
+  margin: 0;
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--border);
+}
+
+/* image */
+.shot img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  user-select: none;
+
+}
+
+/* badges */
+.badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+
+  color: #fff;
+  background: rgba(121, 28, 57, 0.85);
+  backdrop-filter: blur(6px);
+}
+
+/* dots */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.6rem 0 0.4rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  background: #d0d0d0;
+  cursor: pointer;
+  padding: 0;
+
+  transition: width 0.25s ease, background 0.25s ease;
+}
+
+.dot.active {
+  width: 24px;
+  background: var(--accent);
+}
+
+/* texte accrocheur */
+.txtaccrocheur {
+  margin-top: 0.8rem;
+  text-align: center;
+
+  p {
+    max-width: 920px;
+    margin: 0 auto;
+
+    background: var(--soft2);
+    border: 1px solid var(--border);
+    border-left: 5px solid #66705b;
+    border-radius: 12px;
+
+    padding: 0.9rem 1.1rem;
+    line-height: 1.6;
+    font-weight: 500;
+    color: var(--text);
+  }
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .carousel {
+    padding: 1rem;
   }
 
-  // ---- One slide row ----
+  .shot img {
+    height: 260px;
+  }
+}
+
+@media (max-width: 650px) {
   .carousel-slide {
-    min-width: 100%;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    padding: 1rem 0;
-
-    img {
-      width: 48%;
-      height: 300px;
-      object-fit: cover;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-
-      &:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.22);
-      }
-    }
+    grid-template-columns: 1fr;
+    gap: 0.9rem;
+    padding: 0.7rem;
   }
 
-  // ---- Dots ----
-  .carousel-dots {
-    display: flex;
-    justify-content: center;
-    gap: 0.6rem;
-    margin: 1.4rem 0 0.8rem;
-
-    .dot {
-      width: 12px;
-      height: 12px;
-      border: none;
-      border-radius: 50%;
-      background: #d1d1d1;
-      padding: 0;
-      cursor: pointer;
-      transition: background 0.3s ease, transform 0.3s ease;
-
-      &:hover {
-        transform: scale(1.2);
-        background: #b5b5b5;
-      }
-
-      &.active {
-        background: #791C39;
-        transform: scale(1.25);
-      }
-    }
+  .shot img {
+    height: 230px;
   }
 
-  // ---- Texte accrocheur ----
-  .txtaccrocheur {
-    margin-top: 2rem;
-    text-align: center;
-    padding: 10px;
-    
-    p {
-      max-width: 900px;
-      margin: 0 auto;
-      line-height: 1.65;
-      color: black;
-      font-weight: 500;
-      background: #f9f3f5;
-      border-left: 4px solid #791C39;
-      padding: 1rem 1.5rem;
-      border-radius: 6px;
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
-    }
-  }
-
-  // ---- Responsive ----
-  @media (max-width: 900px) {
-    .carousel-slide {
-      gap: 1rem;
-
-      img {
-        height: 240px;
-      }
-    }
-  }
-
-  @media (max-width: 600px) {
-    .carousel-slide {
-      flex-direction: column;
-      align-items: center;
-
-      img {
-        width: 90%;
-        height: 220px;
-      }
-    }
-
-    .txtaccrocheur p {
-      font-size: 1rem;
-      padding: 1rem;
-    }
+  .txtaccrocheur p {
+    font-size: 1rem;
+    padding: 1rem;
   }
 }
