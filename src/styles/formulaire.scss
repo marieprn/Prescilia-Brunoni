@@ -1,0 +1,120 @@
+.formulaire {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 36px;
+    font-weight: 700;
+    text-align: right;
+    position: relative;
+    margin-bottom: 40px;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 120px;
+      height: 3px;
+      background: #66705b;
+      margin: 12px 0 0 auto;
+    }
+  }
+
+  /* ===== Form ===== */
+  .formulaireContenu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    background: rgba(121, 28, 57, 0.05);
+    padding: 32px;
+    border-radius: 20px;
+  }
+
+  /* ===== Champs ===== */
+  .formulaireContenu > div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+  }
+
+  input,
+  textarea {
+    padding: 12px 14px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1px solid #dcdcdc;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    font-family: inherit;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #aaa;
+  }
+
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border-color: #791c39;
+    box-shadow: 0 0 0 3px rgba(121, 28, 57, 0.15);
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 140px;
+  }
+
+  /* Message en pleine largeur */
+  .formulaireContenu > div:last-of-type {
+    grid-column: 1 / -1;
+  }
+
+  /* ===== Bouton ===== */
+  button {
+    grid-column: 1 / -1;
+    margin-top: 12px;
+    padding: 14px;
+    border-radius: 999px;
+    border: none;
+    background: #791c39;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background 0.2s ease, transform 0.1s ease,
+      box-shadow 0.1s ease;
+  }
+
+  button:hover {
+    background: darken(#791c39, 5%);
+    box-shadow: 0 8px 20px rgba(121, 28, 57, 0.3);
+  }
+
+  button:active {
+    transform: translateY(1px);
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 768px) {
+    h2 {
+      text-align: left;
+
+      &::after {
+        margin-left: 0;
+        margin-right: auto;
+      }
+    }
+
+    .formulaireContenu {
+      grid-template-columns: 1fr;
+      padding: 24px;
+    }
+  }
+}
