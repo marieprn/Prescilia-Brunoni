@@ -1,5 +1,4 @@
-import Header from "./components/header";
-import Menu from "./components/menu";
+import TopHeader from "./components/topHeader";
 import Banner from "./components/banner";
 import Presentation from "./components/presentation";
 import Fonctionnement from "./components/fonctionnement";
@@ -15,8 +14,7 @@ function App() {
 
   return (
     <>
-      <Header />
-      <Menu />
+      <TopHeader/>
 
       <section id="accueil">
         <Banner/>
@@ -26,7 +24,7 @@ function App() {
         <Presentation />
       </section>
 
-      <section id="presentation">
+      <section id="fonctionnement">
         <Fonctionnement />
       </section>
 
