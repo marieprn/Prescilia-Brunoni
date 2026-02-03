@@ -9,7 +9,7 @@ const Banner = () => (
     </div>
 
     <div className="bannerContent">
-      <h2>Vos travaux, sans stress</h2>
+      <h3>Vos travaux, sans stress</h3>
 
       <p>
         Je sélectionne les meilleurs artisans et coordonne votre projet de A à Z.

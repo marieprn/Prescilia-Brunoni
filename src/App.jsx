@@ -2,6 +2,7 @@ import Header from "./components/header";
 import Menu from "./components/menu";
 import Banner from "./components/banner";
 import Presentation from "./components/presentation";
+import Fonctionnement from "./components/fonctionnement";
 import Engagements from "./components/engagements";
 import Realisations from "./components/realisation";
 import Avis from "./components/Avis";
@@ -23,6 +24,10 @@ function App() {
 
        <section id="presentation">
         <Presentation />
+      </section>
+
+      <section id="presentation">
+        <Fonctionnement />
       </section>
 
       <section id="engagement">
