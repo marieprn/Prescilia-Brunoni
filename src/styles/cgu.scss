@@ -1,0 +1,48 @@
+@use 'variables' as *;
+
+.cgu {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $espace-xl $espace-m;
+
+  h1 {
+    font-family: $font-sous-titre;
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: $espace-xl;
+    position: relative;
+    display: inline-block;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 3px;
+      background: $couleur-principale;
+      margin-top: 10px;
+      border-radius: 2px;
+    }
+  }
+
+  section {
+    margin-bottom: $espace-l;
+
+    h2 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: $couleur-principale;
+      margin-bottom: $espace-s;
+    }
+
+    p {
+      line-height: 1.8;
+      color: #444;
+    }
+
+    a {
+      color: $couleur-principale;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+  }
+}

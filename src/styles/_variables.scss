@@ -1,0 +1,42 @@
+// Couleurs
+$couleur-principale: #66705b; // vert kaki du bouton navbar
+$couleur-texte: #1a1a1a;
+$couleur-fond: rgba(255, 255, 255, 0.95);
+$couleur-bordure: #e0e0e0;
+$couleur-accent: #791c39;
+
+// Typographies
+$font-titre: 'Boldonse', sans-serif;
+$font-sous-titre: 'Cormorant', serif;
+$font-texte: 'Montserrat', sans-serif;
+
+// Espacements
+$espace-s: 8px;
+$espace-m: 16px;
+$espace-l: 32px;
+$espace-xl: 64px;
+
+// Taille des titres
+$taille-h2: 2.25rem;
+
+// Mixin h2 avec soulignement
+@mixin titre-section($align: left) {
+  font-size: $taille-h2;
+  font-weight: 700;
+  text-align: $align;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: $couleur-principale;
+    margin-top: 10px;
+    border-radius: 2px;
+
+    @if $align == right {
+      margin-left: auto;
+    }
+  }
+}

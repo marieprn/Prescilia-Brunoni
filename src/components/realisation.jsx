@@ -3,8 +3,10 @@ import { useNavigate } from "react-router-dom";
 import { realisationsData } from "../data/realisationData";
 import "../styles/realisation.scss";
 
+const categories = ["Tous", "Cuisine", "Salle de bain", "Extension", "Ouverture", "Chambre"];
+
 const Realisations = () => {
-  const [filter, setFilter] = useState("tous");
+  const [filter, setFilter] = useState("Tous");
   const navigate = useNavigate();
 
   const filtered = filter === "Tous"
@@ -16,8 +18,12 @@ const Realisations = () => {
       <h2>Nos réalisations</h2>
 
       <div className="filters">
-        {["Tous", "Cuisine", "Salle de bain", "Extension", "Ouverture", "Chambre"].map(cat => (
-          <button key={cat} onClick={() => setFilter(cat)}>
+        {categories.map(cat => (
+          <button
+            key={cat}
+            className={filter === cat ? "active" : ""}
+            onClick={() => setFilter(cat)}
+          >
             {cat}
           </button>
         ))}
@@ -31,6 +37,10 @@ const Realisations = () => {
             onClick={() => navigate(`/realisations/${item.id}`)}
           >
             <img src={item.images[0]} alt={item.title} />
+            <div className="card__info">
+              <span className="card__category">{item.category}</span>
+              <p className="card__title">{item.title}</p>
+            </div>
           </div>
         ))}
       </div>

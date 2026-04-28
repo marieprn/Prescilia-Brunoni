@@ -1,45 +1,62 @@
+@use 'variables' as *;
+
 .engagements {
-  padding: 20px 20px;
+  padding: $espace-m;
   max-width: 1200px;
   margin: 0 auto;
 
   h2 {
-    font-size: 36px;
-    font-weight: 700;
-    text-align: right;
-    position: relative;
-
-    &::after {
-      content: "";
-      display: block;
-      width: 120px;
-      height: 3px;
-      background: #66705b;
-      margin: 12px 0 0 auto;
-    }
+    @include titre-section(right);
   }
 
   .engagementsContenu {
-    max-width: 600px;
-    margin-left: auto;
-    border-radius: 8px;
-    background: rgba(121, 28, 57, 0.05);
-    padding: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $espace-xl;
+    align-items: center;
+    margin-top: $espace-l;
+  }
+
+  .engagements__liste {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: $espace-m;
+
     li {
-      margin-bottom: 12px;
-      line-height: 1.6;
-      position: relative;
-      padding-left: 20px;
-      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: $espace-m;
+      font-size: 1rem;
+      line-height: 1.5;
+      font-weight: 500;
 
       &::before {
-        content: "•";
-        position: absolute;
-        left: 0;
-        color: #791C39;
-        font-size: 20px;
-        line-height: 1;
+        content: "";
+        flex-shrink: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $couleur-principale;
       }
+    }
+  }
+
+  .engagements__accroche {
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: #444;
+    font-style: italic;
+    padding: $espace-l;
+    border-left: 3px solid $couleur-principale;
+    background: rgba(102, 112, 91, 0.05);
+    border-radius: 0 8px 8px 0;
+  }
+
+  @media (max-width: 700px) {
+    .engagementsContenu {
+      grid-template-columns: 1fr;
     }
   }
 }

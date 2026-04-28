@@ -1,21 +1,82 @@
+@use 'variables' as *;
+
 .avis {
-  padding: 20px 20px;
+  padding: $espace-m;
   max-width: 1200px;
   margin: 0 auto;
 
   h2 {
-    font-size: 36px;
-    font-weight: 700;
-    text-align: right;
-    position: relative;
+   @include titre-section(right);
+  }
 
-    &::after {
-      content: "";
+  &__carrousel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $espace-m;
+    margin-top: $espace-l;
+  }
+
+  &__slide {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+
+    img {
+      width: 100%;
       display: block;
-      width: 120px;
-      height: 3px;
-      background: #66705b;
-      margin: 12px 0 0 auto;
+      object-fit: contain;
     }
+  }
+
+  &__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: $couleur-principale;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: darken($couleur-principale, 8%);
+    }
+
+    &--prev { left: 0; }
+    &--next { right: 0; }
+  }
+
+  &__dots {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: $couleur-bordure;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    padding: 0;
+
+    &.active {
+      background: $couleur-principale;
+    }
+  }
+
+  &__vide {
+    text-align: center;
+    color: #666;
+    margin-top: $espace-l;
   }
 }

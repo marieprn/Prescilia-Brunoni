@@ -1,0 +1,36 @@
+@use 'variables' as *;
+
+.contact {
+  text-align: center;
+  padding: $espace-xl $espace-l;
+  h2{
+    @include titre-section(left);
+  }
+
+  &__instruction {
+    margin: $espace-m auto;
+    max-width: 500px;
+  }
+
+  &__liste {
+    list-style: none;
+    padding: 0;
+    margin: $espace-m auto $espace-l;
+  }
+
+  &__bouton {
+    display: inline-block;
+    background-color: $couleur-principale;
+    color: white;
+    padding: $espace-s $espace-l;
+    border-radius: 6px;
+    text-decoration: none;
+    font-family: $font-texte;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+
+    &:hover {
+      background-color: darken($couleur-principale, 8%);
+    }
+  }
+}

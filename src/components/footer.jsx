@@ -1,51 +1,79 @@
 import "../styles/footer.scss";
-
-import { FiPhone, FiMail } from "react-icons/fi";
-import { FaInstagram } from "react-icons/fa";
+import { FiPhone, FiMail, FiInstagram } from "react-icons/fi";
 
 export default function Footer() {
   return (
     <footer className="siteFooter">
-        <div className="footerContainer">
+      <div className="footerContainer">
         <div className="footerGrid">
-            <p className="footerDesc">
-              Prescilia BRUNONI courtière en travaux depuis 8 ans
-            </p>
-            <div className="footerLien">
-                <a className="footerLienTel" href="tel:+33663552936">
-                    <FiPhone />
-                    <span>06 63 55 29 36</span>
-                </a>
 
-                <a className="footerLienMail" href="mailto:presciliabrunoni@gmail.com">
-                    <FiMail />
-                    <span>presciliabrunoni@gmail.com</span>
-                </a>
+          {/* Colonne 1 — Identité */}
+          <div className="footerCol">
+            <p className="footerNom">Prescilia Brunoni</p>
+            <p className="footerDesc">
+              Courtière en travaux depuis 2018
+            </p>
+
+            <div className="footerContacts">
+              <a href="tel:+33663552936" className="footerContact">
+                <FiPhone size={15} />
+                06 63 55 29 36
+              </a>
+
+              <a
+                href="mailto:presciliabrunoni@gmail.com"
+                className="footerContact"
+              >
+                <FiMail size={15} />
+                presciliabrunoni@gmail.com
+              </a>
             </div>
           </div>
-          <nav className="siteFooter__col" aria-label="Liens légaux">
-            <h3 className="siteFooter__title"> </h3>
-            <ul className="siteFooter__list">
-              <li><a className="siteFooter__link" href="/cgu-mentions-legales">CGU – Mentions légales</a></li>
-            </ul>
-          </nav>
 
-          <div className="footerSocial">
+          {/* Colonne 2 — Navigation */}
+          <div className="footerCol">
+            <p className="footerColTitre">Navigation</p>
+
+            <ul className="footerLinks">
+              <li><a href="#engagement">Engagement</a></li>
+              <li><a href="#presentation">Présentation</a></li>
+              <li><a href="#fonctionnement">Fonctionnement</a></li>
+              <li><a href="#realisations">Réalisations</a></li>
+              <li><a href="#avis">Avis</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          {/* Colonne 3 — Légal + Social */}
+          <div className="footerCol">
+            <p className="footerColTitre">Légal</p>
+
+            <ul className="footerLinks">
+              <li>
+                <a href="/cgu-mentions-legales">
+                  CGU – Mentions légales
+                </a>
+              </li>
+            </ul>
+
             <a
-                className="footerSocialBtn"
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noreferrer"
-                aria-label="Instagram"
+              href="https://www.instagram.com"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram"
+              className="footerInstagram"
             >
-                <FaInstagram />
+              <FiInstagram size={18} />
+              Instagram
             </a>
           </div>
+
         </div>
 
         <p className="footerLegal">
-          Prescilia Brunoni - 
+          © {new Date().getFullYear()} Prescilia Brunoni — Tous droits réservés
         </p>
+      </div>
     </footer>
   );
 }

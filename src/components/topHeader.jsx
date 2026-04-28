@@ -2,13 +2,13 @@ import React from "react";
 import "../styles/topHeader.scss";
 
 const menuItems = [
-  { label: "Accueil", href: "#accueil" },
-  { label: "Présentation", href: "#presentation" },
-  { label: "Fonctionnement", href: "#fonctionnement" },
-  { label: "Engagement", href: "#engagement" },
-  { label: "Réalisation", href: "#realisation" },
-  { label: "Avis", href: "#avis" },
-  { label: "Contactez-nous", href: "#contact" },
+  { label: "Accueil", href: "/#accueil" },
+  { label: "Engagement", href: "/#engagement" },
+  { label: "Présentation", href: "/#presentation" },
+  { label: "Fonctionnement", href: "/#fonctionnement" },
+  { label: "Réalisation", href: "/#realisation" },
+  { label: "Avis", href: "/#avis" },
+  { label: "Contactez-nous", href: "/#contact" },
 ];
 
 const TopHeader = () => {

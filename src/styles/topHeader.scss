@@ -1,4 +1,6 @@
-/* ===== BARRE FIXE ===== */
+@use 'variables' as *;
+
+// === BARRE FIXE ===
 .topHeader {
   position: fixed;
   top: 0;
@@ -7,18 +9,18 @@
   z-index: 9999;
 
   height: 80px;
-  padding: 0 32px;
+  padding: 0 $espace-l;
 
   display: flex;
   align-items: center;
   gap: 30px;
 
-  background: rgba(255, 255, 255, 0.95);
+  background: $couleur-fond;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
-/* ===== MENU ===== */
+// === MENU ===
 .menu-bar ul {
   list-style: none;
   display: flex;
@@ -30,7 +32,7 @@
 
 .menu-bar a {
   text-decoration: none;
-  color: #1a1a1a;
+  color: $couleur-texte;
   font-weight: 500;
   font-size: 0.95rem;
   position: relative;
@@ -42,14 +44,13 @@
     bottom: -6px;
     width: 100%;
     height: 2px;
-    background: #b07a45;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.2s ease;
   }
 
   &:hover {
-    color: #b07a45;
+    color: $couleur-principale;
 
     &::after {
       transform: scaleX(1);
@@ -57,11 +58,11 @@
   }
 }
 
-/* CTA */
+// CTA
 .menu-bar li:last-child a {
-  background: #66705b;
+  background: $couleur-principale;
   color: white;
-  padding: 8px 14px;
+  padding: $espace-s 14px;
   border-radius: 8px;
 
   &::after {
@@ -69,7 +70,7 @@
   }
 }
 
-/* ===== HEADER TEXTE ===== */
+// === HEADER TEXTE ===
 .headerText {
   margin-left: auto;
   text-align: right;
@@ -87,15 +88,14 @@
   }
 }
 
-/* Décaler le reste de la page */
 body {
   padding-top: 80px;
 }
 
-/* ===== Responsive ===== */
+// === Responsive ===
 @media (max-width: 900px) {
   .headerText {
-    display: none; // option mobile
+    display: none;
   }
 
   .menu-bar ul {

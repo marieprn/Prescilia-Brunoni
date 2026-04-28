@@ -3,19 +3,17 @@ import "../styles/banner.scss";
 import BannerImg from "../assets/banner.jpg";
 
 const Banner = () => (
-  <section className="banner">
+  <div className="banner">
     <div className="bannerImg">
-        <img src={BannerImg} alt="Image Bannière" />
+      <img src={BannerImg} alt="Image Bannière" />
     </div>
-
     <div className="bannerContent">
-      <h3>Vos travaux, sans stress</h3>
-
+      <h3>Vos travaux, sans stress !</h3>
       <p>
         Je sélectionne les meilleurs artisans et coordonne votre projet de A à Z.
       </p>
     </div>
-  </section>
+  </div>
 );
 
 export default Banner;
