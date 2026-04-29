@@ -8,7 +8,7 @@ const Banner = () => (
       <img src={BannerImg} alt="Image Bannière" />
     </div>
     <div className="bannerContent">
-      <h3>Vos travaux, sans stress !</h3>
+      <span>Vos travaux, sans stress !</span>
       <p>
         Je sélectionne les meilleurs artisans et coordonne votre projet de A à Z.
       </p>

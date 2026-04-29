@@ -2,7 +2,7 @@
 
 .siteFooter {
   background: $couleur-principale;
-  color: #fff;
+  color: white;
 }
 
 .footerContainer {
@@ -37,7 +37,6 @@
 .footerDesc {
   margin: 0;
   font-size: 0.85rem;
-  opacity: 0.75;
 }
 
 .footerContacts {
@@ -51,10 +50,9 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-size: 0.9rem;
-  opacity: 0.9;
   transition: opacity 0.15s ease;
 
   &:hover {
@@ -71,7 +69,6 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  opacity: 0.6;
 }
 
 .footerLinks {
@@ -83,10 +80,9 @@
   gap: 10px;
 
   a {
-    color: #fff;
+    color: white;
     text-decoration: none;
     font-size: 0.9rem;
-    opacity: 0.9;
     transition: opacity 0.15s ease;
 
     &:hover {
@@ -102,10 +98,9 @@
   align-items: center;
   gap: 8px;
   margin-top: $espace-m;
-  color: #fff;
+  color: white;
   text-decoration: none;
   font-size: 0.9rem;
-  opacity: 0.9;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 8px 14px;
@@ -123,7 +118,7 @@
   padding-top: $espace-m;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   text-align: center;
-  color: rgba(255, 255, 255, 0.6);
+  color: white;
   font-size: 0.75rem;
 }
 

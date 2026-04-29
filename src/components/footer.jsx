@@ -9,7 +9,7 @@ export default function Footer() {
 
           {/* Colonne 1 — Identité */}
           <div className="footerCol">
-            <p className="footerNom">Prescilia Brunoni</p>
+            <h3 className="footerNom">Prescilia Brunoni</h3>
             <p className="footerDesc">
               Courtière en travaux depuis 2018
             </p>
@@ -38,7 +38,7 @@ export default function Footer() {
               <li><a href="#engagement">Engagement</a></li>
               <li><a href="#presentation">Présentation</a></li>
               <li><a href="#fonctionnement">Fonctionnement</a></li>
-              <li><a href="#realisations">Réalisations</a></li>
+              <li><a href="#realisation">Réalisations</a></li>
               <li><a href="#avis">Avis</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>

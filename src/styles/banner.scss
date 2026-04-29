@@ -1,18 +1,21 @@
 .banner {
     .bannerImg{
         opacity: 0.5;
-        img{
+        img {
             height: 500px;
             width: 100%;
+            object-fit: cover; // ← rogné au lieu de compressé
+            object-position: center;
         }
     }
     .bannerContent {
         position: absolute;
         top: 200px;
         left: 40px;
-        h3{
+        span{
             font-size: 42px;
             margin-bottom: 16px;
+            font-weight: 700;
         }
         p{
             font-size: 18px;

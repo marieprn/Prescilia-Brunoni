@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import "../styles/topHeader.scss";
 
 const menuItems = [
@@ -6,26 +6,40 @@ const menuItems = [
   { label: "Engagement", href: "/#engagement" },
   { label: "Présentation", href: "/#presentation" },
   { label: "Fonctionnement", href: "/#fonctionnement" },
-  { label: "Réalisation", href: "/#realisation" },
+  { label: "Réalisations", href: "/#realisation" },
   { label: "Avis", href: "/#avis" },
   { label: "Contactez-nous", href: "/#contact" },
 ];
 
 const TopHeader = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <header className="topHeader">
-      {/* MENU à gauche */}
       <nav className="menu-bar">
-        <ul>
+        {/* Burger */}
+        <button
+          className={`burger ${isOpen ? "open" : ""}`}
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Menu"
+        >
+          <span />
+          <span />
+          <span />
+        </button>
+
+        {/* Menu */}
+        <ul className={isOpen ? "open" : ""}>
           {menuItems.map((item) => (
             <li key={item.label}>
-              <a href={item.href}>{item.label}</a>
+              <a href={item.href} onClick={() => setIsOpen(false)}>
+                {item.label}
+              </a>
             </li>
           ))}
         </ul>
       </nav>
 
-      {/* HEADER à droite */}
       <div className="headerText">
         <h1>PRESCILIA BRUNONI</h1>
         <p>Courtier en travaux depuis 2018</p>
