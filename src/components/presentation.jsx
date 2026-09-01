@@ -1,5 +1,5 @@
 import "../styles/presentation.scss";
-import ProfilImg from "../assets/profil.jpg";
+import ProfilImg from "../assets/profil.png";
 
 const Presentation = () => (
   <section className="presentation">

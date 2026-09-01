@@ -29,7 +29,7 @@
   display: grid;
   grid-template-columns: 1.6fr 1fr;
   gap: 40px;
-  align-items: start;
+  align-items: center; // au lieu de start
 }
 
 .texte {
@@ -43,12 +43,14 @@
 }
 
 .photo {
-  position: sticky;
-  align-self: start;
+  display: flex;
+  justify-content: center;
+  align-self: center;
 
   img {
     width: 100%;
-    max-width: 360px;
+    max-width: 260px;
+    aspect-ratio: 1 / 1;
     border-radius: 16px;
     object-fit: cover;
     box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
@@ -65,14 +67,11 @@
     grid-template-columns: 1fr;
   }
 
-  .photo {
-    position: static;
-
-    img {
-      max-width: 280px;
-      margin: 0 auto;
-      display: block;
-    }
+  .photo img {
+    max-width: 200px;
+    margin: 0 auto;
+    display: block;
+  }
 
     .caption {
       margin: 14px auto 0;
@@ -90,7 +89,7 @@
       }
     }
   }
-}
+
 
 @media (max-width: 600px) {
   .presentation {
