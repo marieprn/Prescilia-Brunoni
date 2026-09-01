@@ -57,7 +57,7 @@ export default function Footer() {
             </ul>
 
             <a
-              href="https://www.instagram.com"
+              href="https://www.instagram.com/splendidhouse?igsi=MWI4bHUzNWtoOXYzNQ=="
               target="_blank"
               rel="noreferrer"
               aria-label="Instagram"
