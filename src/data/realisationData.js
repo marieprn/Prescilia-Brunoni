@@ -2,11 +2,11 @@ import cuisine1_1 from "../assets/cusines/1/cuisineApres1_1.jpg";
 import sdb1 from "../assets/salleDeBains/sdb1.jpg";
 import sdb2 from "../assets/salleDeBains/sdb2.jpg";
 import sdb3 from "../assets/salleDeBains/sdb3.jpg";
-import sdb4 from "../assets/salleDeBains/sdb4.jpg";
+import sdb4 from "../assets/salleDeBains/sdb4.JPG";
 import ouverture1_1 from "../assets/ouvertures/ouvertureApres1-1.jpg";
 import chambre1_1 from "../assets/chambres/1/chambreApres1-1.jpg";
 import chambre1_2 from "../assets/chambres/1/chambreApres1-2.jpg";
-import combles1 from "../assets/combles/combles_1.jpg";
+import combles1 from "../assets/combles/combles_1.JPG";
 
 export const realisationsData = [
     {
