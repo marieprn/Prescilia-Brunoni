@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { realisationsData } from "../data/realisationData";
 import "../styles/realisation.scss";
 
@@ -7,7 +6,6 @@ const categories = ["Tous", "Cuisine", "Salle de bain", "Extension", "Ouverture"
 
 const Realisations = () => {
   const [filter, setFilter] = useState("Tous");
-  const navigate = useNavigate();
 
   const filtered = filter === "Tous"
     ? realisationsData

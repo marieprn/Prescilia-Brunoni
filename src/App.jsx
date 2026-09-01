@@ -5,7 +5,7 @@ import Presentation from "./components/presentation";
 import Fonctionnement from "./components/fonctionnement";
 import Engagements from "./components/engagements";
 import Realisations from "./components/realisation";
-import Avis from "./components/Avis";
+import Avis from "./components/avis";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
 import CGU from "./components/CGU";
