@@ -9,7 +9,7 @@ import Avis from "./components/avis";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
 import CGU from "./components/CGU";
-import "./styles/app.scss";
+import "./styles/App.scss";
 
 const HomePage = () => (
   <>
