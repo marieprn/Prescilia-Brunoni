@@ -29,14 +29,13 @@ const Realisations = () => {
         ))}
       </div>
 
-      <div className="cards">
-        {filtered.map(item => (
-          <div
-            className="card"
-            key={item.id}
-            onClick={() => navigate(`/realisations/${item.id}`)}
-          >
-            <img src={item.images[0]} alt="" />
+     <div className="cards">
+        {filtered.map((item) => (
+          <div className="card" key={item.id}>
+            <img
+              src={item.images?.[0] || "/placeholder.jpg"}
+              alt={item.title}
+            />
             <div className="card__info">
               <span className="card__category">{item.category}</span>
               <p className="card__title">{item.title}</p>
