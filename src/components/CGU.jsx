@@ -9,10 +9,10 @@ const CGU = () => (
       <p>
         Le présent site est édité par :<br />
         <strong>Prescilia Brunoni</strong> — Courtière en travaux<br />
-        Adresse : [À COMPLÉTER]<br />
+        Adresse : 28 rue Eugene Briais<br /> 77000 Melun <br />
         Téléphone : 06 63 55 29 36<br />
         Email : presciliabrunoni@gmail.com<br />
-        SIRET : [À COMPLÉTER]
+        SIRET : 841 756 620 00024
       </p>
     </section>
 
