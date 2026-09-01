@@ -1,9 +1,9 @@
 import "../styles/avis.scss";
 
-import avis1 from "../assets/avis/avis1.jpg"
-import avis2 from "../assets/avis/avis2.jpg"
-import avis3 from "../assets/avis/avis3.jpg"
-import avis4 from "../assets/avis/avis4.jpg"
+import avis1 from "../assets/avis/avis1.JPG"
+import avis2 from "../assets/avis/avis2.JPG"
+import avis3 from "../assets/avis/avis3.JPG"
+import avis4 from "../assets/avis/avis4.JPG"
 
 const avisImages = [
   avis1, avis2, avis3, avis4
